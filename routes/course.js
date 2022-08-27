@@ -6,5 +6,6 @@ router.post('/query', course.query)
 router.post('/queryByChapterId', course.queryByChapterId)
 router.post('/insert', course.insert)
 router.post('/update', course.update)
+router.post('/delete', course.delete)
 
 module.exports = router

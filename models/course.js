@@ -4,7 +4,7 @@ const course = {
     query: 'select SQL_CALC_FOUND_ROWS * from course limit ?, ?',
     queryByChapterId: 'select SQL_CALC_FOUND_ROWS * from course where chapter_id = ?',
     insert: 'insert into course (course_name, course_path, chapter_id, chapter_name, user_id, create_time, course_order) values (?, ?, ?, ?, ?, ?, ?)',
-    update: 'update course set course_name = ?, course_path = ?, chapter_id = ?, chapter_name = ?, course_order = ?',
+    update: 'update course set course_name = ?, course_path = ?, chapter_id = ?, chapter_name = ?, course_order = ? where course_id = ?',
     delete: 'delete from course where course_id =?'
 
 }

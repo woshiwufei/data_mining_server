@@ -7,9 +7,25 @@ const sendMessage = require("../util/sendMessage");
 
 login = async function (req, res, next) {
     let params = req.body;
+    let {password} = req.body
 
     let result = await user.query(params)
-    sendMessage(res, result, ["登录成功！", '用户名或密码错误，请重新输入'])
+
+    if(result.data[0].password === password){
+            res.send({
+                status: 'success',
+                msg: '登录成功！',
+                ...result
+            })
+    } else {
+            res.send({
+                status: 'error',
+                msg: '用户名或密码错误，请重新输入',
+                ...result
+            })
+        res.end()
+    }
+    // sendMessage(res, result, ["登录成功！", '用户名或密码错误，请重新输入'])
 
     // if (result.errno) {
     //     res.status(500).send({
