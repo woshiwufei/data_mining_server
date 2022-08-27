@@ -1,4 +1,4 @@
-const course = require('../config/course')
+const course = require('../models/course')
 const time_Formatter = require('../util/timeFormat')
 const sendMessage = require('../util/sendMessage')
 

@@ -1,4 +1,4 @@
-const comment = require('../config/comment')
+const comment = require('../models/comment')
 const time_Formatter = require('../util/timeFormat')
 const sendMessage = require("../util/sendMessage");
 

@@ -1,4 +1,4 @@
-const category = require("../config/category")
+const category = require("../models/category")
 const sendMessage = require("../util/sendMessage");
 
 insert = async function (req, res, next) {

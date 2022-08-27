@@ -1,4 +1,4 @@
-const message = require('../config/message')
+const message = require('../models/message')
 const time_Formatter = require('../util/timeFormat')
 const sendMessage = require("../util/sendMessage");
 

@@ -14,7 +14,7 @@ const sendMessage = (res, result, msg, timeRevert) => {
             data: result
         })
     } else if (result.total || result.affectedRows){
-        if (timeRevert.length){
+        if (timeRevert&&timeRevert.length){
             time_Formatter(result.data || result, timeRevert)
         }
         res.send({

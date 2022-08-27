@@ -2,7 +2,7 @@
 // const router = express.Router();
 // const connectionPool = require('../util/pool')
 
-const user = require('../config/user')
+const user = require('../models/user')
 const sendMessage = require("../util/sendMessage");
 
 login = async function (req, res, next) {
@@ -109,9 +109,9 @@ queryAllUser = async function (req, res, next) {
             msg: '出错啦...请稍候再试！',
             data: result
         })
-    } else if (result.length) {
+    } else if (result.total) {
         let data = []
-        result.forEach(item => {
+        result.data.forEach(item => {
             item.register_time = item.register_time.toLocaleString()
             delete item.password
             data.push(item);

@@ -1,4 +1,4 @@
-const chapter = require('../config/chapter')
+const chapter = require('../models/chapter')
 const time_Formatter = require('../util/timeFormat')
 const sendMessage = require("../util/sendMessage");
 

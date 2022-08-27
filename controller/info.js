@@ -1,4 +1,4 @@
-const info = require('../config/info')
+const info = require('../models/info')
 // const time_Formatter = require('../util/timeFormat')
 const sendMessage = require("../util/sendMessage");
 
@@ -97,7 +97,7 @@ queryAll = async (req, res, next) => {
 }
 
 queryAllInfo = async (req, res, next) => {
-    let data = req.query;
+    let data = req.body;
     console.log(data, "111");
     console.log(req, "222");
 
@@ -128,7 +128,7 @@ queryAllInfo = async (req, res, next) => {
 }
 
 queryAllDraft = async (req, res, next) => {
-    let data = req.query;
+    let data = req.body;
     console.log(data);
 
     let result = await info.queryAllDraft(data);
